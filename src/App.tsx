@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { ProjectProvider } from './context/ProjectContext';
 import { Home } from './pages/Home';
 import { FramePhase } from './pages/FramePhase';
+import { ExplorePhase } from './pages/ExplorePhase';
 import { PlaceholderPhase } from './pages/PlaceholderPhase';
 
 function App() {
@@ -11,16 +12,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/project/frame" element={<FramePhase />} />
-          <Route
-            path="/project/explore"
-            element={
-              <PlaceholderPhase
-                title="Explore the System"
-                description="Identify and organize the variables that comprise your system."
-                previousPhase="frame"
-              />
-            }
-          />
+          <Route path="/project/explore" element={<ExplorePhase />} />
           <Route
             path="/project/map"
             element={
