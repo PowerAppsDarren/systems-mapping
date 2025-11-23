@@ -1,16 +1,16 @@
 import { useCallback, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ReactFlow, {
-  Node,
-  Edge,
   addEdge,
-  Connection,
   useNodesState,
   useEdgesState,
   Controls,
   Background,
   MiniMap,
   MarkerType,
+  type Node,
+  type Edge,
+  type Connection,
 } from 'reactflow';
 import 'reactflow/dist/style.css';
 import { v4 as uuidv4 } from 'uuid';
