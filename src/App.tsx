@@ -3,7 +3,9 @@ import { ProjectProvider } from './context/ProjectContext';
 import { Home } from './pages/Home';
 import { FramePhase } from './pages/FramePhase';
 import { ExplorePhase } from './pages/ExplorePhase';
-import { PlaceholderPhase } from './pages/PlaceholderPhase';
+import { MapPhase } from './pages/MapPhase';
+import { ReflectPhase } from './pages/ReflectPhase';
+import { LeveragePhase } from './pages/LeveragePhase';
 
 function App() {
   return (
@@ -13,36 +15,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/project/frame" element={<FramePhase />} />
           <Route path="/project/explore" element={<ExplorePhase />} />
-          <Route
-            path="/project/map"
-            element={
-              <PlaceholderPhase
-                title="Map the System"
-                description="Visualize relationships, connections, and feedback loops in your system."
-                previousPhase="explore"
-              />
-            }
-          />
-          <Route
-            path="/project/reflect"
-            element={
-              <PlaceholderPhase
-                title="Reflect on the System"
-                description="Synthesize insights and create narratives that explain system behavior."
-                previousPhase="map"
-              />
-            }
-          />
-          <Route
-            path="/project/leverage"
-            element={
-              <PlaceholderPhase
-                title="Leverage for Change"
-                description="Identify points for positive intervention in your system."
-                previousPhase="reflect"
-              />
-            }
-          />
+          <Route path="/project/map" element={<MapPhase />} />
+          <Route path="/project/reflect" element={<ReflectPhase />} />
+          <Route path="/project/leverage" element={<LeveragePhase />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </ProjectProvider>
